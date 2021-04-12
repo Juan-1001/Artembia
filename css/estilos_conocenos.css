@@ -1,0 +1,301 @@
+.go-top{
+     position: fixed;
+     bottom: 100px;
+     right: -100%;
+     width: 50px;
+     height: 50px;
+     background:#e01a00;
+     border:2px solid var(--red);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     cursor: pointer;
+     z-index: 1000;
+     transition: 0.5s;
+ }
+ .go-top:hover{
+     background: var(--red);
+     color:#fff;
+     border: 2px solid var(--white);
+ }
+ .go-top:hover span{color:var(--white);}
+ 
+ .go-top > span{
+    font-size: 30px;
+    color: var(--black);
+ }
+ 
+ 
+ /** Skew **/
+ .skew-abajo{
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     border-width: 0 0 10vh 100vw;
+     border-style: solid;
+     border-color: transparent transparent rgba(139, 138, 138, 0.61) transparent;
+ }
+ .skew-arriba{
+     position: absolute;
+     top: 0;
+     left: 0;
+     border-width: 10vh 100vw 0 0;
+     border-style: solid;
+     border-color: rgba(139, 138, 138, 0.61) transparent transparent transparent;
+     z-index: 10;
+ }
+ 
+ /** Navegation Menu **/
+ :root {
+    --colorrojo: #EA5455;
+    --colorazul: #339191;
+    --colorverde: #56E892;
+    --coloramarillo: #D7AA5C;
+    --azuloscuro: #1A2238;
+  }
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background: whitesmoke;
+    -webkit-transition: 1s ease all;
+    transition: 1s ease all;
+    overflow-x: hidden;
+  }
+
+  /* nav */
+
+  .topnav {
+    z-index: 1000;
+    top: 0px;
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.6);
+    }
+  
+  .topnav .logonav {
+      float: left;
+      width: 50px;
+      height: 50px;
+      margin-top: 25px;
+      margin-left: 15px;
+      margin-right: 0px;
+  }
+  
+  .topnav p {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      margin: 15px 5px;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 28px;
+      font-family: 'Ubuntu', sans-serif
+  }
+    
+    .topnav a {
+      float: right;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      margin: 15px 8px;
+      padding: 14px 16px;
+      text-decoration: none !important;
+      font-size: 18px;
+      font-weight: bolder;
+    }
+    
+    .topnav a:hover {
+        color: var(--colorrojo);
+        border-bottom: 3px solid var(--colorrojo);
+    }
+    
+    .topnav a.active {
+        color: var(--colorrojo);
+        border-bottom: 3px solid var(--colorrojo);
+    }
+  
+    .topnav .unete {
+        border: 3px solid var(--colorrojo);
+        border-radius: 15px;
+    }
+    .topnav .unete:hover{
+        color: white;
+        background: var(--colorrojo);
+    }
+    
+    .topnav .icon {
+      display: none;
+    }
+    .topnav .icon:hover {
+      border: none;
+    }
+  
+    @media screen and (max-width: 900px) {
+      .topnav a:not(:first-child) {display: none;}
+      .topnav a.icon {
+        float: center;
+        display: inherit;
+      }
+    }
+    
+    @media screen and (max-width: 900px) {
+      .topnav.responsive {position: relative;}
+      .topnav.responsive .icon {
+        text-align: center;
+        font-size: 25px;
+      }
+      .topnav.responsive a {
+        float: none;
+        display: block;
+      }
+      .topnav {
+        background-color: var(--azuloscuro);
+        float: center;
+        margin: auto;
+        text-align: center;
+        position: fixed !important;
+      }
+      .headimg {
+        margin-top: 100px;
+        margin-bottom: opx;
+      }
+  }
+
+/* headimg */
+
+.headimg{
+  width: 100%;
+  z-index: 999;
+}
+
+/* nav 2 */
+
+/* .topnav2 {
+  z-index: 1000 ;
+  width: 100%;
+  text-align: center;
+  }
+  
+  .topnav2 a {
+    display: inline-block;
+    color: var(--colorazul);
+    text-align: center;
+    margin: 15px 8px;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  
+  .topnav2 a:hover {
+      color: var(--colorverde);
+      border-bottom: 3px solid var(--colorverde);
+  }
+  
+  .topnav2 a.active {
+      color: var(--colorverde);
+      border-bottom: 3px solid var(--colorverde);
+  }
+  
+  .topnav2 .icon2 {
+    display: none;
+  }
+  .topnav2 .icon2:hover {
+    border: none;
+    color: var(--colorverde);
+  }
+
+@media screen and (max-width: 720px) {
+  .topnav2 a:not(:first-child) {display: none;}
+  .topnav2 a.icon2 {
+    float: center;
+    display: inherit;
+  }
+}
+
+@media screen and (max-width
+: 720px) {
+  .topnav2.responsive2 {position: relative;}
+  .topnav2.responsive2 .icon2 {
+    text-align: center;
+    font-size: 25px;
+    color: var(--colorazul);
+  }
+  .topnav2.responsive2 a {
+    float: none;
+    display: block;
+  }
+  .topnav2 {
+    background-color: var(--azuloscuro);
+    float: center;
+    margin: auto;
+    text-align: center;
+  }
+  .topnav2 .icon2:hover {
+    color: var(--colorverde);
+  }
+} */
+
+/* conocenos */
+
+ .our-projects{
+     position: relative;
+     width: 100%;
+     height: 100%; 
+     background: url(../images/conocenos/fotografia2.jpg);
+     background-attachment:fixed;
+     background-position: center;
+     background-size: cover;
+ }
+ .our-projects .deg-background{
+     position:absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background:rgba(0,0,0,0.8);
+ }
+ .our-projects .ejeZproject{
+     position: relative;
+     width: 100%;
+     height: 100%;
+ }
+ .our-projects .container-project{
+     width: 90%;
+     margin:auto;
+     padding-top: 50px;
+ }
+ .our-projects .container-project .project-img{
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
+     margin-top: 80px;
+     padding-bottom: 100px;
+ }
+ .our-projects .container-project .project-img img{
+   width: calc(30% - 10px);
+   margin:10px;
+   object-fit: cover;
+   border-radius: 10px;
+   border: 3px solid var(--colorverde);
+   border-radius: 50%;
+ }
+
+ @media only screen and (max-width:773px){
+     .our-projects .container-project .project-img img{width: 80%; margin-bottom: 30px;}
+ }
+ @media only screen and (max-width:446px){
+     .our-projects .container-project .project-title h2{font-size: 30px;}
+ }
+ 

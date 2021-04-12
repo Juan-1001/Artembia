@@ -1,0 +1,244 @@
+:root {
+  --colorrojo: #EA5455;
+  --colorazul: #339191;
+  --colorverde: #56E892;
+  --coloramarillo: #D7AA5C;
+  --azuloscuro: #1A2238;
+}
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: whitesmoke;
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
+}
+
+/* nav */
+
+.topnav {
+  z-index: 1000;
+  top: 0px;
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.6);
+  }
+
+.topnav .logonav {
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin-top: 25px;
+    margin-left: 15px;
+    margin-right: 0px;
+}
+
+.topnav p {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    margin: 15px 5px;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 28px;
+    font-family: 'Ubuntu', sans-serif
+}
+  
+  .topnav a {
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    margin: 15px 8px;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bolder;
+  }
+  
+  .topnav a:hover {
+      color: var(--colorrojo);
+      border-bottom: 3px solid var(--colorrojo);
+  }
+  
+  .topnav a.active {
+      color: var(--colorrojo);
+      border-bottom: 3px solid var(--colorrojo);
+  }
+
+  .topnav .unete {
+      border: 3px solid var(--colorrojo);
+      border-radius: 15px;
+  }
+  .topnav .unete:hover{
+      color: white;
+      background: var(--colorrojo);
+  }
+  
+  .topnav .icon {
+    display: none;
+  }
+  .topnav .icon:hover {
+    border: none;
+  }
+
+  @media screen and (max-width: 900px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: center;
+      display: inherit;
+    }
+  }
+  
+  @media screen and (max-width: 900px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+      text-align: center;
+      font-size: 25px;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+    }
+    .topnav {
+      background-color: var(--azuloscuro);
+      float: center;
+      margin: auto;
+      text-align: center;
+      position: fixed !important;
+    }
+    .headimg {
+      margin-top: 100px;
+      margin-bottom: opx;
+    }
+}
+
+/* headimg */
+
+.headimg{
+width: 100%;
+z-index: 999;
+}
+
+/* cards */
+
+.row {
+  width: 100%;
+  margin: auto;
+  display: inline-block;
+}
+
+.column {
+  width: 30%;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+@media screen and (max-width: 1000px) {
+  .column {
+    width: 47%;
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 5px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .column {
+    width: 95%;
+    display: inline-block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+}
+
+.card img {
+  border-radius: 15px;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+/*Redes Sociales */
+
+.social-icons{
+  padding:0;
+  list-style:none;
+  margin:1em;
+  text-align:center;
+}
+
+.social-icons li{
+  display:inline-block;
+  margin:.15em;
+  position:relative;
+  font-size:1.2em
+}
+
+.social-icons i{
+  color:#fff;
+  position:absolute;
+  top:21px;
+  left:21px;
+  transition:all 265ms ease-out
+}
+
+.social-icons a{
+  display:inline-block
+}
+
+.social-icons a:before{
+  transform:scale(1);
+  -ms-transform:scale(1);
+  -webkit-transform:scale(1);
+  content:" ";
+  width:60px;
+  height:60px;
+  border-radius:100%;
+  display:block;
+  background:linear-gradient(45deg,var(--colorazul),var(--colorrojo));
+  transition:all 265ms ease-out
+}
+
+.social-icons a:hover:before{
+  transform:scale(0);
+  transition:all 265ms ease-in
+}
+
+.social-icons a:hover i{
+  transform:scale(2.2);
+  -ms-transform:scale(2.2);
+  -webkit-transform:scale(2.2);
+  color:#1A2238;
+  background:-webkit-linear-gradient(45deg, var(--colorrojo),var(--coloramarillo));
+  -webkit-text-fill-color:transparent;
+  -webkit-background-clip:text;
+  transition:all 265ms ease-in
+}
+  

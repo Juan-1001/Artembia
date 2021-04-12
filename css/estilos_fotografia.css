@@ -1,0 +1,338 @@
+:root {
+    --colorrojo: #EA5455;
+    --colorazul: #339191;
+    --colorverde: #56E892;
+    --coloramarillo: #D7AA5C;
+    --azuloscuro: #1A2238;
+    --blanco: #ffff;
+  }
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f2f2f2;
+    -webkit-transition: 1s ease all;
+    transition: 1s ease all;
+  }
+
+  /* nav */
+
+  .topnav {
+    z-index: 1000;
+    top: 0px;
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.6);
+    }
+  
+  .topnav .logonav {
+      float: left;
+      width: 50px;
+      height: 50px;
+      margin-top: 25px;
+      margin-left: 15px;
+      margin-right: 0px;
+  }
+  
+  .topnav p {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      margin: 15px 5px;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 28px;
+      font-family: 'Ubuntu', sans-serif
+  }
+    
+    .topnav a {
+      float: right;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      margin: 15px 8px;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bolder;
+    }
+    
+    .topnav a:hover {
+        color: var(--colorrojo);
+        border-bottom: 3px solid var(--colorrojo);
+    }
+    
+    .topnav a.active {
+        color: var(--colorrojo);
+        border-bottom: 3px solid var(--colorrojo);
+    }
+  
+    .topnav .unete {
+        border: 3px solid var(--colorrojo);
+        border-radius: 15px;
+    }
+    .topnav .unete:hover{
+        color: white;
+        background: var(--colorrojo);
+    }
+    
+    .topnav .icon {
+      display: none;
+    }
+    .topnav .icon:hover {
+      border: none;
+    }
+  
+    @media screen and (max-width: 900px) {
+      .topnav a:not(:first-child) {display: none;}
+      .topnav a.icon {
+        float: center;
+        display: inherit;
+      }
+    }
+    
+    @media screen and (max-width: 900px) {
+      .topnav.responsive {position: relative;}
+      .topnav.responsive .icon {
+        text-align: center;
+        font-size: 25px;
+      }
+      .topnav.responsive a {
+        float: none;
+        display: block;
+      }
+      .topnav {
+        background-color: var(--azuloscuro);
+        float: center;
+        margin: auto;
+        text-align: center;
+        position: fixed !important;
+      }
+      .headimg {
+        margin-top: 100px;
+        margin-bottom: opx;
+      }
+  }
+
+/* headimg */
+
+.headimg{
+  width: 100%;
+  z-index: 999;
+}
+
+/* nav 2 */
+
+.topnav2 {
+  z-index: 900 ;
+  width: 100%;
+  text-align: center;
+  }
+  
+  .topnav2 a {
+    display: inline-block;
+    color: var(--colorazul);
+    text-align: center;
+    margin: 15px 8px;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  
+  .topnav2 a:hover {
+      color: var(--colorverde);
+      border-bottom: 3px solid var(--colorverde);
+  }
+  
+  .topnav2 a.active {
+      color: var(--colorverde);
+      border-bottom: 3px solid var(--colorverde);
+  }
+  
+  .topnav2 .icon2 {
+    display: none;
+  }
+  .topnav2 .icon2:hover {
+    border: none;
+    color: var(--colorverde);
+  }
+
+@media screen and (max-width: 770px) {
+  .topnav2 a:not(:first-child) {display: none;}
+  .topnav2 a.icon2 {
+    float: center;
+    display: inherit;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .topnav2.responsive2 {position: relative;}
+  .topnav2.responsive2 .icon2 {
+    text-align: center;
+    font-size: 25px;
+    color: var(--colorazul);
+  }
+  .topnav2.responsive2 a {
+    float: none;
+    display: block;
+  }
+  .topnav2 {
+    background-color: var(--azuloscuro);
+    float: center;
+    margin: auto;
+    text-align: center;
+  }
+  .topnav2 .icon2:hover {
+    color: var(--colorverde);
+  }
+}
+
+/* Galeria ilustracion */
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+
+  margin: 0 20px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.btn {
+  position: relative;
+  margin-left: 8px;
+	margin-top: -70px;
+  background-color: none !important;
+  opacity: 1;
+  border: none;
+  border-radius: 10px;
+  color: white;
+    }
+
+.btn-primary {
+  background-color: var(--azuloscuro);
+}
+.btn-card {
+  display: inline !important;
+  margin-top: 10px !important;
+  font-size: 22px;
+  color: white;
+  width: 100% !important;
+}
+
+.btn-card:hover {
+  color: white;
+  background-color: var(--colorrojo);
+}
+
+.card {
+  width: 100%;
+  display: inline-block;
+	background: #56E892;
+  border: none;
+  border-radius: 15px;
+  text-align: center;
+}
+
+/* tooltip */
+
+.tooltip-box {
+  display: none;
+  position: absolute;
+  background-color: var(--colorazul);
+  line-height: 20px;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  right: -30px;
+  bottom: 45px;
+}
+
+.tooltip-box::after {
+  content: "";
+  display: block;
+  border-top: 7px solid var(--colorazul);
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  position: absolute;
+  bottom: -7px;
+  left: calc(50% - 7px);
+}
+
+.btn:hover .tooltip-box {
+  display: inline-block;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Boton Arriba */
+
+.go-top{
+  position: fixed;
+  bottom: 100px;
+  right: -100%;
+  width: 50px;
+  height: 50px;
+  background:#EA5455;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1000;
+  transition: 0.5s;
+  border-radius: 15px !important;
+}
+.go-top:hover{
+  color:#fff;
+  border: none;
+}
+.go-top:hover span{color:var(--blanco);}
+
+.go-top > span{
+ font-size: 30px;
+ color: var(--azuloscuro);
+}
